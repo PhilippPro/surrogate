@@ -7,7 +7,7 @@
 #' @param tbl.hypPars df with getMlrRandomBotHyperpars()
 #' @param tbl.metaFeatures df with getMlrRandomBotHyperpars()
 #' @return surrogate model
-makeSurrogateModel = function(measure.name, learner.name, task.ids, tbl.results, tbl.hypPars, tbl.metaFeatures, param.set){
+makeSurrogateModels = function(measure.name, learner.name, task.ids, tbl.results, tbl.hypPars, tbl.metaFeatures, param.set){
   #train mlr model on full table for measure
   mlr.mod.measure = list()
   for(i in seq_along(task.ids)) {
